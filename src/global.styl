@@ -248,3 +248,317 @@ footer
 
   
 //Bundles page
+
+#navigator
+  position fixed
+  display flex
+  z-index 2
+  top 0px
+  left 0px
+  height 65px
+  width 100%
+  background-color #fff
+  
+#logo
+  line-height 60px
+  font-size 30px
+  font-weight Bold
+  color #faf103
+  padding-left 20px
+  width 500px
+  p
+    span
+      color #8b8686
+      font-size 20px
+
+#pager
+  display flex
+  width 100%
+
+.pageOption
+  width 100%
+  line-height 60px
+  
+#bundlesMain
+  width 100%
+  height 100%
+  padding-top 65px
+#planHolder
+  width 100%
+  height 100%
+  padding-top 50px
+
+.plan
+  position relative
+  height 330px
+  width 100%
+  
+.plan:nth-child(odd)
+  background-color #1B9BDE
+.plan:nth-child(even)
+  background-color #ab5ab9
+  
+.planTitle
+  position absolute
+  top -20px
+  left 20px
+  background-color #deb81b
+  
+.planBody
+  padding 20px
+  height 290px
+  width 100%
+  display flex
+  
+.planImg,planDesc,planCost
+  height 100%
+  
+.planImg
+  flex-grow 2
+  
+.planDesc
+  flex-grow 2
+  
+.planHeader
+  color #f4f4f4
+  font-weight Bold
+  font-size 20px
+  
+.planFeatures
+  padding 10px
+  padding-left 40px
+  font-family "Open Sans"
+  color #e4e1e1
+  li
+    padding 5px
+  
+.planCost
+  position relative
+  flex-grow 3
+ 
+.planCalcHolder
+  position absolute
+  display flex
+  bottom 0px
+  
+.planCalcLeft
+  flex-grow 1
+  input
+    height 40px
+    width 200px
+    font-family "Open Sans"
+    font-weight Bold
+    color #909090
+    padding-left 20px
+    border none
+    
+.wattHolder
+  padding-left 20px
+  font-weight Bold
+  background-color #6CC0E5
+  height 40px
+  line-height 40px
+  width 200px
+  color #262626
+  font-size 20px
+  
+.planCalcRight
+  flex-grow 1
+  padding-top 40px
+  
+.priceHolder
+  margin-left 10px
+  font-weight Bold
+  background-color #e5ad6c
+  height 40px
+  line-height 40px
+  width 160px
+  color #262626
+  text-align center
+  font-size 20px
+.planFooter
+  height 40px
+  width 100%
+  background-color #3F4658
+  text-align center
+  font-family "Open Sans"
+  color rgba(255, 255, 255, 0.47)
+  line-height 40px
+  font-weight Bold
+  
+  
+//customize page
+#customizeMain
+  width 100%
+  height 100%
+  padding-top 65px
+  display flex
+  
+#customizerLeft
+  width 50%
+#selectorHolder
+  position relative
+  margin-top 50px
+  width 100%
+  height 300px
+  background-color #3F4658
+  
+#planTitle
+  position absolute
+  top -20px
+  left 20px
+  background-color #deb81b
+  
+#selector
+  height 100%
+  width 50%
+  margin 0 auto
+  border-left 1px solid rgba(77, 73, 73, 0.35)
+  border-right 1px solid rgba(77, 73, 73, 0.35)
+  
+.iconHolder
+  padding 20px
+  display flex
+  list-style none
+  justify-content space-between
+  flex-wrap wrap
+  li
+    width 20%
+
+#resultHolder
+  width 100%
+  height 100%
+  
+#breakdownHolder
+  width 100%
+  background-color #fff
+  color #e8e8e8
+  
+#breakdownHeader
+  width 100%
+  height 40px
+  background-color #1B9BDE
+  padding 40px
+  padding-top 20px
+  font-size 25px
+  font-family Raleway
+  font-weight Bold
+  
+#breakdown
+  height 293px
+  overflow hidden
+  overflow-y scroll
+  width 100%
+  background-color #1B9BDE
+  padding 50px
+  padding-top 20px
+  
+#breakdown ul
+  list-style none
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+#breakdown ul li
+  display flex
+  flex-direction column
+  width 150px
+  margin-bottom 20px
+  
+#breakdown ul li div
+  display flex
+  height 30px
+  line-height 30px
+  input
+    width 55px
+    height 30px
+    text-align center
+    font-family "Open Sans"
+    font-weight Bold
+    color #909090
+    margin 0 5px
+  p
+    font-weight BOld
+  
+#breakdown ul li div:last-child
+  background-color #32aa52
+  p
+    width 100%
+    text-align right
+    padding 5px
+    padding-top 0px
+  
+#calculationsHolder
+  height 652px
+  width 50%
+  background-color #fff
+  margin-top 50px
+  
+#periodHolder
+  position relative
+  width 100%
+  height 100px
+  input
+    position absolute
+    top 50%
+    left 50%
+    transform translate(-50%,-50%)
+    height 40px
+    width 200px
+    font-family "Open Sans"
+    font-weight Bold
+    color #909090
+    text-align center
+    font-size 20px
+    
+    
+    
+#kwattHolder,#finalpriceHolder
+  position relative
+  height 250px
+  width 100%
+
+#kcircle
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+  height 200px
+  width 200px
+ 
+  
+#kcircle:after
+  box-sizing border-box
+  position absolute
+  top 0px
+  left 0px
+  width 100%
+  height 100%
+  content ''
+  border 3px solid rgba(239, 199, 93, 0.53)
+  border-radius 200px
+//  clip: rect(0px,200px,150px,20px)
+  
+#kcircle:before
+  box-sizing border-box
+  position absolute
+  top 50%
+  left 50%
+  width 104%
+  height 104%
+  content ''
+  border 6px solid rgba(255, 196, 0, 0.96)
+  border-radius 200px
+  transform translate(-50%,-50%)
+  
+  
+#kcircleTitle
+  position absolute
+  top 50%
+  left 50%
+  transform translate(-50%,-50%)
+  text-align center
+  font-family "Open Sans"
+  font-weight Bold
+  color #909090
+  text-align center
+  font-size 20px

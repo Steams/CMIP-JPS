@@ -11,7 +11,7 @@ angular.module 'CMIP-JPS'
       url:'bundles'
       templateUrl:'/app/partials/bundles.html'
       })
-    .state('create',{
-      url:'create'
+    .state('customize',{
+      url:'customize'
       templateUrl:'/app/partials/create.html'
     })

@@ -7,9 +7,9 @@
     }).state('bundles', {
       url: 'bundles',
       templateUrl: '/app/partials/bundles.html'
-    }).state('create', {
-      url: 'create',
-      templateUrl: '/app/partials/create.html'
+    }).state('customize', {
+      url: 'customize',
+      templateUrl: '/app/partials/customize.html'
     });
   });
 
