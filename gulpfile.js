@@ -35,7 +35,7 @@ gulp.task('compileJade',function(){
 
 gulp.task('compileStylus',function(){
   gulp.src('src/**/*.styl')
-  .pipe(changed('src'))
+  // .pipe(changed('src'))
    .pipe(stylus())
    .pipe(gulp.dest('app'));
 });
