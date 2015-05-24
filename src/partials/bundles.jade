@@ -7,12 +7,12 @@ div#bundlesWrapper.wrapper
       option(value="est for: 1 month")
     #planHolder
       .plan
-        .planTitle.floater
+        .planTitle.floater(ng-click="setPlan('Light')")
           p Light Plan >
         .planBody
           .planImg
           .planDesc
-            p.planHeader Based on 2 bedroom, 1 kitchen, 1 bath
+            p.planHeader Based on 2 bedroom, 1 kitchen, 1 bath dwelling
             ul.planFeatures
               li 1 * refridgerator
               li 1 * television
@@ -25,53 +25,56 @@ div#bundlesWrapper.wrapper
               .planCalcLeft
                 input(list="periods" value="est for: 1 month")
                 .wattHolder
-                  p 1000 Kw/h
+                  p 60 Kw/h
               .planCalcRight
                 .priceHolder
                   p $
-                    span 2000 JA
+                    span 2600 JA
                 
             
         .planFooter
           p Click on a Plan to View Details or Customize
       .plan
-        .planTitle.floater
+        .planTitle.floater(ng-click="setPlan('Medium')")
           p Medium Plan >
         .planBody
           .planImg
           .planDesc
-            p.planHeader Based on 2 bedroom, 1 kitchen, 1 bath
+            p.planHeader Based on 4 bedroom, 1 kitchen, 2 bath dwelling
             ul.planFeatures
               li 1 * refridgerator
-              li 1 * television
+              li 2 * television
               li 5 * flourescent bulb
-              li 2 * standing fan
-              
+              li 3 * standing fan
+              li 1 * microwave
+              li 1 * water heater
               
           .planCost
             .planCalcHolder
               .planCalcLeft
                 input(list="periods" value="est for: 1 month")
                 .wattHolder
-                  p 1000 Kw/h
+                  p 180 Kw/h
               .planCalcRight
                 .priceHolder
                   p $
-                    span 7000 JA
+                    span 7400 JA
         .planFooter
           p Click on a Plan to View Details or Customize
       .plan
-        .planTitle.floater
+        .planTitle.floater(ng-click="setPlan('Heavy')")
           p Heavy Plan >
         .planBody
           .planImg
           .planDesc
-            p.planHeader Based on 2 bedroom, 1 kitchen, 1 bath
+            p.planHeader Based on 6 bedroom, 1 kitchen, 4 bath dwelling
             ul.planFeatures
-              li 1 * refridgerator
-              li 1 * television
-              li 5 * flourescent bulb
-              li 2 * standing fan
+              li 2 * refridgerator
+              li 3 * television
+              li 8 * energy saving bulb
+              li 5 * standing fan
+              li 1 * water heater
+              li 1 * ac unit
               
               
           .planCost
@@ -79,11 +82,11 @@ div#bundlesWrapper.wrapper
               .planCalcLeft
                 input(list="periods" value="est for: 1 month")
                 .wattHolder
-                  p 1000 Kw/h
+                  p 510 Kw/h
               .planCalcRight
                 .priceHolder
                   p $
-                    span 10000 JA
+                    span 20000 JA
         .planFooter
           p Click on a Plan to View Details or Customize
           

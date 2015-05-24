@@ -6,9 +6,11 @@
       templateUrl: '/app/partials/home.html'
     }).state('bundles', {
       url: 'bundles',
-      templateUrl: '/app/partials/bundles.html'
+      templateUrl: '/app/partials/bundles.html',
+      controller: 'bundlesCtrl'
     }).state('customize', {
       url: 'customize',
+      controller: 'bundlesCtrl',
       templateUrl: '/app/partials/customize.html'
     });
   });

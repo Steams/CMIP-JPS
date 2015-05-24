@@ -4,114 +4,42 @@ div#customizeWrapper.wrapper
     #customizerLeft
       #selectorHolder
         #planTitle.floater
-          p Basic Plan
+          p {{plan}} Plan
         #selector
           ul.iconHolder
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
-            li.iconFrame icon
+            li.iconFrame(ng-repeat="icon in icons" ng-class="{selected:icon.selected ==true}" ng-click="select($index)")
+              p {{icon.abrv}}
       #resultHolder
         #breakdownHolder
           #breakdownHeader
             p BreakDown
           #breakdown
             ul
-              li
+              li(ng-repeat="app in appliances")
                 div
-                  p Fridge
-                  input(type='text' value='1')
+                  p {{app.name}}
+                  input(type='text' ng-model="appliances[$index].amount")
                 div
-                  input(type='text' value='4')
+                  input(type='text' ng-model="appliances[$index].hours" )
                   span h/day
                 div
-                  input(type='text' value='1000') 
-                  span KWH 
-                  span.small avg
+                  input(type='text' ng-model="appliances[$index].watt") 
+                  span W/h 
+                  span
                 div
-                  p $500/day
-              li
-                div
-                  p Fridge
-                  input(type='text' value='1')
-                div
-                  input(type='text' value='4')
-                  span h/day
-                div
-                  input(type='text' value='1000') 
-                  span KWH 
-                  span.small avg
-                div
-                  p $500/day
-              li
-                div
-                  p Fridge
-                  input(type='text' value='1')
-                div
-                  input(type='text' value='4')
-                  span h/day
-                div
-                  input(type='text' value='1000') 
-                  span KWH 
-                  span.small avg
-                div
-                  p $500/day
-              li
-                div
-                  p Fridge
-                  input(type='text' value='1')
-                div
-                  input(type='text' value='4')
-                  span h/day
-                div
-                  input(type='text' value='1000') 
-                  span KWH 
-                  span.small avg
-                div
-                  p $500/day
-              li
-                div
-                  p Fridge
-                  input(type='text' value='1')
-                div
-                  input(type='text' value='4')
-                  span h/day
-                div
-                  input(type='text' value='1000') 
-                  span KWH 
-                  span.small avg
-                div
-                  p $500/day
-              li
-                div
-                  p Fridge
-                  input(type='text' value='1')
-                div
-                  input(type='text' value='4')
-                  span h/day
-                div
-                  input(type='text' value='1000') 
-                  span KWH 
-                  span.small avg
-                div
-                  p $500/day
+                  p $ {{cost(app)}} /day
 
     #calculationsHolder
       #periodHolder
-        input(list="periods" value="1 month")
+        input(list="periods" ng-model="period")
       #kwattHolder
         #kcircle
           #kcircleTitle
-            p 1000 Kwh
+            p {{sumWatt()*parser(period)}} KWH
       #finalpriceHolder
         #kcircle
           #kcircleTitle
-            p $ 11000 JA
+            p $ {{sumCost()*parser(period)}} JA
     datalist(id="periods")
       option(value="1 month")
       option(value="1 week")

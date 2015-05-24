@@ -10,8 +10,10 @@ angular.module 'CMIP-JPS'
     .state('bundles',{
       url:'bundles'
       templateUrl:'/app/partials/bundles.html'
+      controller:'bundlesCtrl'
       })
     .state('customize',{
       url:'customize'
-      templateUrl:'/app/partials/create.html'
+      controller:'bundlesCtrl'
+      templateUrl:'/app/partials/customize.html'
     })
